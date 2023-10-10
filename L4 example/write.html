@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>write writeln</title>
+    <script>
+        function start()
+        {
+            var str = "efgh";
+            document.write("<div style='font-size: 30px;' id='btn' onclick='change()'>abcd</div>");
+            document.writeln("abcd<br />");
+            document.writeln(str+'<br />');
+        }
+        function change()
+        {
+
+            document.getElementById('btn').innerHTML = 'wxyz';
+            
+        }
+    </script>
+</head>
+<body onload="start()">
+    
+</body>
+</html>

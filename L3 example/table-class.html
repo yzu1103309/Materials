@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        #T1, #T2{
+            border-collapse: collapse;
+        }
+        .R1{
+            height: 50px;
+        }
+        .R2{
+            height: 100px;
+        }
+        #T1 .R1 .D1, #T1 .R2 .D1,
+        #T1 .R1 .D2, #T1 .R2 .D2{
+            border: 2px solid orange;
+        }
+        .D1{
+            width: 100px;
+        }
+        .D2{
+            width: 200px;
+        }
+        #T2 .R1 .D1, #T2 .R2 .D1,
+        #T2 .R1 .D2, #T2 .R2 .D2{
+            border: 2px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <table id="T1">
+        <tr class="R1">
+            <td class="D1"></td>
+            <td class="D2"></td>
+        </tr>
+        <tr class="R2">
+            <td class="D1"></td>
+            <td class="D2"></td>
+        </tr>
+        <tr class="R1">
+            <td class="D1"></td>
+            <td class="D2"></td>
+        </tr>
+    </table>
+    <br />
+    <table id="T2">
+        <tr class="R2">
+            <td class="D2"></td>
+            <td class="D1"></td>
+        </tr>
+        <tr class="R1">
+            <td class="D2"></td>
+            <td class="D1"></td>
+        </tr>
+        <tr class="R2">
+            <td class="D2"></td>
+            <td class="D1"></td>
+        </tr>
+    </table>
+</html>

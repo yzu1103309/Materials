@@ -1,0 +1,60 @@
+JavaScript實用函式
+
+    { 如何debug和測試 }
+	console.log('','','','',''......);
+	練習 : 顯示剛剛的運算練習
+	
+	{ 網頁內容 }
+	document.write("")
+	document.writeln('')
+	練習 : 輸出文字和有style的歡迎文字
+	document.getElementById('') : return object
+
+	{ 元素內功能 }
+	obj.innerHtml : object of element html content
+	obj.innerHtml : object of element text content
+	{ 不同之處 : 階層標籤 }
+	練習 : 點按計數器
+	obj.append('');
+	obj.appendChild( document.createElement('p') );
+	{ 不同之處 : 加入標籤 }
+
+	window.alert('')
+	window.prompt : return input
+
+	obj.setAttribute('name', 'value');
+	範例 : 放大文字
+
+	{ 如果今天除了放大還要其他style }
+	style object
+	
+	{表單用}
+	obj.value : 填入值
+	範例 : 歡迎文字加名字
+	範例 : 簡單驗證
+
+	{數學類}
+	Math.random() : return 0.xxxxxxxx
+	Math.floor() : retrieve integer
+	範例 : 隨機變色方框
+	範例 : lottery-easy;
+
+	{時間類}
+	setInterval( action, ms ) : return control object
+	clearInterval(controlObj)
+	範例 : 放大文字
+	練習 : 倒數計時
+	setTimeout( action, ms )
+	範例 : 過五秒自動停止
+
+	jquery
+
+	範例 : lottery
+	範例 : 49格踩格子(2player, start, lose, change-color)
+
+	練習 : 模板的使用
+	{
+		https://nicepage.com/css-templates
+		https://html5up.net/
+	}
+	

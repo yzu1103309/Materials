@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win the Lottery</title>
+    <script src="./jquery-3.6.3.js"></script>
+    <style>
+        .box
+        {
+            background-color: #75d6ff;
+            width: 80px;
+            height: 65px;
+            border: 0px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 45px;
+            text-align: center;
+            padding-top: 15px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        #main
+        {
+            width: 660px;
+            margin: 0 auto;
+        }
+        #btn-area
+        {
+            width: 660px;
+            margin: 0 auto;
+        }
+        .btn
+        {
+            width: 300px;
+            margin-right: 12px;
+            height: 40px;
+        }
+        h2
+        {
+            text-align: center;
+        }
+    </style>
+    <script>
+        var total = 0;
+        var chosen = [];
+        function change(num)
+        {
+            total++;
+            if(total <= 6)
+            {
+                $("#"+num).css("background-color","red");
+                chosen.push(num);
+            }
+        }
+        function reset()
+        {
+            $("#main").html("");
+            for(var i = 1; i <= 49; ++i)
+            {
+                $("#main").append("<div class='box' id='"+i+"' onclick='change("+i+")'>"+i+"</div>");
+            }
+            total = 0;
+            chosen = [];
+        }
+        function check()
+        {
+            var count = 0;
+            if(total >= 6)
+            {
+                var win = [];
+                for(var i = 0; i < 6; i++)
+                {
+                    win.push( Math.floor( 49*Math.random() ) );
+                }
+                for(var m = 0; m < 6; ++m)
+                {
+                    for(var n = 0; n < 6; ++n)
+                    {
+                        if(chosen[m] == win[n])
+                        {
+                            ++count;
+                        }
+                    }
+                }
+                $("#main").html("<h2>幸運號碼 "+win+"</h2>"+"<h2>您的號碼 "+chosen+"</h2>"+"<h2>中了"+count+"個號碼</h2>")
+                total = 0;
+                chosen = [];
+            }
+        }
+    </script>
+</head>
+<body onload="reset()">
+    <div id="main" >
+    </div>
+    <div id="btn-area">
+        <button class="btn" onclick="reset()">清除</button>
+        <button class="btn" onclick="check()">兌獎</button>
+    </div>
+</body>
+</html>

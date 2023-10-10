@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本排版</title>
+    <style>
+        #box1
+        {
+            width: 500px;
+            height: 175px;
+            background-color: #ABCDEF;
+            margin: 100px auto 0px auto;
+            padding: 25px 0 0 25px;
+        }
+        #box2
+        {
+            width: 150px;
+            height: 150px;
+            background-color: #ffbb00;
+            border: 0px solid transparent;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        #box3
+        {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            background-color: #ffb2b2;
+            border: 0px solid transparent;
+            border-radius: 20px;
+            position: relative;
+            left: 250px;
+            top: -100px;
+        }
+        #box2, #box3
+        {
+            box-shadow: 5px 5px 10px gray;
+        }
+        #text-box
+        {
+            width: 200px;
+            text-align: center;
+            margin: 50px 50px;
+            float: right;
+            font-size: 40px;
+            text-shadow: 5px 5px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+        <div id="text-box">#ABCDEF</div>
+    </div>
+    <div id="box3"></div>
+</body>
+</html>

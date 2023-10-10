@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getVal()
+        {
+            var name = document.getElementById("name");
+            name = name.value;
+            alert(name);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="button" onclick="getVal()" value="顯示">
+</body>
+</html>

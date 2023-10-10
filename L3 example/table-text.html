@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table tr{
+            height: 50px;
+        }
+        table tr td{
+            width: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="text-align: center; font-size: 30px;">30px</td>
+            <td colspan="3" style="font-family: Courier; color: #AA00FF;">#AA00FF Courier</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center; font-family: 'Courier New', Courier, monospace"><div style="font-style: italic;">italic</div><div style="font-style: oblique;">oblique</div></td>
+            <td colspan="3" style="color: white; text-align: center;"><span style="text-decoration: overline black;">abcabcabc</span><span style="text-decoration: line-through black;">abcabcabc</span><span style="text-decoration: underline black;">abcabcabc</span></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td style="font-weight: lighter;">細字</td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="font-weight: bold;">粗體</td>
+        </tr>
+    </table>
+</html>

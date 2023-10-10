@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="start(1, 5, 10)">
+
+    <script>
+
+        var answer = [0, 10];
+        function start(a, b, c)
+        {
+            for(var i = a; i < b; ++i)
+            { answer.push( fun1(a, b) ); }
+            answer.push( fun2() + c );
+        }
+        function fun1(x, y)
+        {
+            while(x < 3){ x *= answer[x] }
+            return x + y + fun2();
+        }
+        function fun2()
+        {
+            var sum = 0;
+            for(var i = 0; i < answer.length; ++i)
+            { sum += answer[i]; }
+            return sum;
+        }
+
+    </script>
+</body>
+
+</html>
